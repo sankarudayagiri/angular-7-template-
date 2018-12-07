@@ -1,13 +1,64 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand" href="#">HealthCode</a>
-    <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
-        <!-- <span class="navbar-toggler-icon"></span> -->
+    
+    <!-- sidebar toggle button -->
+
+    <!-- <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <!-- <span class="navbar-toggler-icon"></span> --
         <i class="fa fa-bars text-muted" aria-hidden="true"></i>
-    </button>
-    <div class="collapse navbar-collapse">
+    </button> -->
+
+    <!-- <div class="collapse navbar-collapse">
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="{{ 'Search' }}" >
         </form>
         
+    </div> -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="fa fa-bars text-muted"></i>
+        
+    </button>
+
+   <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+    <div class=" navbar-nav list-group" >
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user"></i>
+            <span>{{ 'User' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user-circle-o"></i>
+            <span>{{ 'Insurer' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>
+            <span>{{ 'Mapping tables' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-industry"></i>
+            <span>{{ 'Sites' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-search-plus"></i>
+            <span>{{ 'Lookup_audit' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-line-chart"></i>
+            <span>{{ 'Veda' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-question"></i>
+            <span>{{ 'Queries' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-lock"></i>
+            <span>{{ 'Locks' }}</span>
+        </a>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>
+            <span>{{ 'Registrations' }}</span>
+        </a>
     </div>
+   </div>
 </nav>

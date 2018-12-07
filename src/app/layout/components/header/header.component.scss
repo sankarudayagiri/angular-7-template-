@@ -36,3 +36,30 @@ $topnav-background-color: #222;
         }
     }
 }
+.list-group {
+    a.list-group-item {
+        background: $topnav-background-color;
+        border: 0;
+        border-radius: 0;
+        color: #999;
+        text-decoration: none;
+        .fa {
+            margin-right: 10px;
+        }
+    }
+    a:hover {
+        background: darken($topnav-background-color, 5%);
+        color: #fff;
+    }
+    a.router-link-active {
+        background: darken($topnav-background-color, 5%);
+        color: #fff;
+    }
+    .header-fields {
+        padding-top: 10px;
+    
+        > .list-group-item:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+}

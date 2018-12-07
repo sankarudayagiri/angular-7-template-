@@ -8,6 +8,15 @@ import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TabBarComponent } from './components/tab-bar/tab-bar.component';
+// import { UserComponent } from './user/user.component';
+// import { InsurerComponent } from './insurer/insurer.component';
+// import { MappingTablesComponent } from './mapping-tables/mapping-tables.component';
+// import { SitesComponent } from './sites/sites.component';
+// import { LookupAuditComponent } from './lookup-audit/lookup-audit.component';
+// import { VedaComponent } from './veda/veda.component';
+// import { QueriesComponent } from './queries/queries.component';
+// import { LocksComponent } from './locks/locks.component';
+// import { RegistrationsComponent } from './registrations/registrations.component';
 
 @NgModule({
     imports: [
