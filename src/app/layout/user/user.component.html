@@ -1,51 +1,16 @@
 <div style="margin:20px;">
-    <!-- <p>testing it...</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>
-      user works!dlf kajg;lfdskgj lka;lkjsdla ldk jlksadhg alsfkhdg alsfhg alkfdhg salkgfh alkfhg aslkgha slfkhg a;lskhg lgkhs glksf hglkfsa hg
-    </p> -->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <!-- Nav tabs --
-          <div class="card">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-            </ul>
-
-            <!-- Tab panes --
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                <div role="tabpanel" class="tab-pane" id="profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
-                <div role="tabpanel" class="tab-pane" id="messages">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-                <div role="tabpanel" class="tab-pane" id="settings">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passage..</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-
+   
     <div class="container-fluid" >
       <div class="row">
-          <div class="col-md-8 text-center " style="background-color: white; padding:0px;">
-              <nav class="">
+          <div class="col-md-8 text-center " style="background-color: white; padding:0px; ">
+              <nav class="" style="border-right:1px solid #e6e6e6;">
                 <div class="nav nav-tabs " id="nav-tab" role="tablist" style="padding-left:10px;">
-                  <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">All</a>
-                  <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">Group</a>
-                  <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Healthcode</a>
-                  <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Medical Center</a>
-                  <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Provider</a>
-                  <a [routerLink]="['/addUser']" class="nav-item nav-link ml-auto" style="float:right !important; color:#2ab6f7;">
+                  <a class="nav-item nav-link active" id="pop1-tab"  href="#pop1" >All</a>
+                  <a class="nav-item nav-link" id="pop2-tab" href="#pop2" >Group</a>
+                  <a class="nav-item nav-link" id="pop3-tab" href="#pop3" >Healthcode</a>
+                  <a class="nav-item nav-link" id="pop4-tab" href="#pop4" >Medical Center</a>
+                  <a class="nav-item nav-link" id="pop5-tab" href="#pop5" >Provider</a>
+                  <a [routerLink]="['/addUser']" class="nav-item nav-link ml-auto" style="color:#2ab6f7;">
                       <i class="fa fa-fw fa-plus-circle"></i>
                       <span>{{ 'Add User' }}</span>
                   </a>           
@@ -55,7 +20,7 @@
               <div class="row ">
                   <div class="col-md-12">
                       <form class="card card-sm" style="border:none;">
-                          <div class="card-body row no-gutters align-items-center" style="padding:5px;">
+                          <div class="card-body row no-gutters align-items-center" style="padding:5px; border-right:1px solid #e6e6e6;">
                               <div class="col-auto">
                                   <i class=" fa fas fa-search fa-lg" style="color:#c8c8c8; padding:15px;"></i>
                               </div>
@@ -76,15 +41,15 @@
                   </div>
                   <!--end of col-->
               </div>
-              <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px;">
+              <!-- <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px; height:119px;">
                  <div class="row">
-                    <div class="col-md-2" style="">
+                    <div class="col-md-1 " style="">
                         <img src="assets/images/im.jpg" width="65" height="65" style="border-radius: 50%; padding:10px; float:left;">
                       </div>
-                      <div class="col-md-10" style="">
-                        <div class="card-header" style="background-color: white; border-bottom:none;">Mr.Some Name</div>
+                      <div class="col-md-11" style="">
+                        <div class="card-header " style="background-color: white; border-bottom:none;"><span style="float:left;">Mr.Some Name</span></div>
                         <div class="card-body">
-                          <ul>
+                          <ul >
                             <li>User ID</li>
                             <li>Site Name</li>
                             <li>Site ID</li>
@@ -94,35 +59,104 @@
                         </div> 
                       </div>
                  </div>
+              </div> -->
+              <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px; height:119px;">
+                <div class="row" >
+                    <div class="card-img-left">
+                        <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
+                   
+                    </div>
+              
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: left;">Mr.Some name</h5>
+                <ul >
+                    <li>User ID</li>
+                    <li>Site Name</li>
+                    <li>Site ID</li>
+                    <li>Days</li>
+                    <li>Attempt</li>
+                  </ul>
               </div>
+            </div>
+                </div>
               <div class="card" style="margin-top: -1px;border-top: none;">                   
                   <div class="card-footer" style="background-color: white; border-radius: 0px;">Footer</div>
               </div>
-              <!-- <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
-                      <div class="pt-3"></div>
-                      <p>1. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                      Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:</p>
-                    </div>
-                <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-                    <div class="pt-3"></div>
-                      <p>2. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                      Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:</p>
-                    
-                </div>
-                <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-                    <div class="pt-3"></div>
-                      <p>3. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
-
-                      Simply place a div with the Bootstrap container class around the navbar. This will center the links inside the navbar:</p>
-                    
-                </div>
-                
-              </div> -->
+             
              
           </div>
+          <div class="col-md-4" style="background-color: white;">
+            <nav class="" style="border:none !important;">
+                <div class="nav nav-tabs" style="border:none !important;">
+                 
+                  <a  class="nav-item nav-link ml-auto" style="padding:20px 0 20px 0;">
+                      <!-- <i class="fa fa-fw fas fa-ellipsis-h"></i> -->
+                      <img src="assets/images/options.png" width="" height="" style="">
+                     
+                  </a>           
+                </div>
+               
+            </nav>
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic flex-container">
+					<img src="assets/images/im.jpg" class=""  style="border-radius: 50%; padding:10px;" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Mr.Some name
+					</div>
+					<div class="profile-usertitle-job">
+						4444333221
+					</div>
+                </div>
+                <div>
+                    <div style="display:inline-block; padding:20px;">
+                        <i class=" fa fas fa-phone" style="padding:10px;"></i>
+                        4444333221
+                    </div>
+                    <div style="display:inline-block; padding:20px;">
+                        <i class=" fa fas fa-envelope" style="padding:10px;"></i>
+                        somename@gmail.com
+                    </div>
+                </div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<br>				
+                <table class="table borderless">                    
+                      <tr>
+                        <th>Site name</th>
+                        <td style="float:right;">some name</td>                        
+                      </tr>                
+                      <tr>
+                        <th>site id</th>
+                        <td style="float:right;">122333</td>                       
+                      </tr>
+                      <tr>
+                        <th>days</th>
+                        <td style="float:right;">10</td>                        
+                      </tr>
+                      <tr>
+                        <th>attempt</th>
+                        <td style="float:right;">50</td>                       
+                      </tr>
+                      <tr>
+                        <th>last logged in</th>
+                        <td style="float:right;">dd/mm/yyyy | hh:mm:ss</td>                       
+                      </tr>
+                      <tr>
+                        <th>created</th>
+                        <td style="float:right;">dd/mm/yyyy | hh:mm:ss</td>                       
+                      </tr>
+                      <tr>
+                        <th>profile</th>
+                        <td style="float:right;">some profile</td>                       
+                      </tr>                    
+                  </table>
+			</div>
+		</div>
       </div>
     </div>
 
