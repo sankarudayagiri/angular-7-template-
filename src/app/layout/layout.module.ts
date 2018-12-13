@@ -7,7 +7,9 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TabBarComponent } from './components/tab-bar/tab-bar.component';
+//import { TabBarComponent } from './components/tab-bar/tab-bar.component';
+//import { AddUserComponent } from './add-user/add-user.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 // import { UserComponent } from './user/user.component';
 // import { InsurerComponent } from './insurer/insurer.component';
 // import { MappingTablesComponent } from './mapping-tables/mapping-tables.component';
@@ -24,7 +26,7 @@ import { TabBarComponent } from './components/tab-bar/tab-bar.component';
         LayoutRoutingModule,        
         NgbDropdownModule
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, TabBarComponent],
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class LayoutModule {}

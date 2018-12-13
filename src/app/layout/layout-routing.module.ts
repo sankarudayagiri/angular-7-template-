@@ -8,16 +8,18 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             { path: '', redirectTo: 'user', pathMatch: 'prefix' },
+            { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'user', loadChildren: './user/user.module#UserModule' },
+            { path: 'addUser', loadChildren: './add-user/add-user.module#AddUserModule' },
             { path: 'insurer', loadChildren: './insurer/insurer.module#InsurerModule' },
             { path: 'mapTables', loadChildren: './mapping-tables/mapping-tables.module#MappingTablesModule' },
             { path: 'sites', loadChildren: './sites/sites.module#SitesModule' },
             { path: 'audit', loadChildren: './lookup-audit/lookup-audit.module#LookupAuditModule' },
-            { path: 'veda', loadChildren: './veda/veda.module#VedaModule' },
+            // { path: 'veda', loadChildren: './veda/veda.module#VedaModule' },
             { path: 'queries', loadChildren: './queries/queries.module#QueriesModule' },
             { path: 'locks', loadChildren: './locks/locks.module#LocksModule' },
-            { path: 'registrations', loadChildren: './registrations/registrations.module#RegistrationsModule' },            
-            { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' }
+            { path: 'registrations', loadChildren: './registrations/registrations.module#RegistrationsModule' }            
+            // { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' }
         ]
     }
 ];

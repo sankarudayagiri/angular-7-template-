@@ -1,12 +1,23 @@
-<nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">HealthCode</a>
+<!-- <div style="width:86px; height:79px; background-color:#6685BB; margin:0px !important; padding:20px; ">
+        <img src="assets/images/menu.png" width="23px" height="24px" >
+    </div> -->
+<nav class="navbar navbar-expand-lg fixed-top" style="left:86px; height:79px; border-bottom:1px solid #e6e6e6;">
+    <!-- <div style="width:86px; height:79px; background-color:#6685BB; margin:0px !important;">
+        <img src="assets/images/menu.png" width="23px" height="24px" >
+    </div> -->
+    <div class="navbar-brand" style="border-right: 1px solid #e6e6e6; padding-right: 10px;">
+        <img src="assets/images/healthcode.png" width="" height="" >
+    </div>&nbsp;
+    <div> Users</div>
     
     <!-- sidebar toggle button -->
 
-    <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
-        <!-- <span class="navbar-toggler-icon"></span> -->
+    <!-- old menu button -->
+
+    <!-- <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <!-- <span class="navbar-toggler-icon"></span> --
         <i class="fa fa-bars text-muted" aria-hidden="true"></i>
-    </button>
+    </button> -->
 
     <!-- <div class="collapse navbar-collapse">
         <form class="form-inline my-2 my-lg-0">
@@ -63,7 +74,10 @@
         </a>
     </div>
    </div> -->
-   <div class="collapse navbar-collapse"> 
+
+   <!-- old user profile -->
+
+   <!-- <div class="collapse navbar-collapse"> 
         <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown" ngbDropdown>
                         <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
@@ -85,6 +99,38 @@
                         </div>
                 </li>
         </ul>
-    </div>
+    </div> -->
+
+    <!-- new profile -->
+
+    <!-- <div class="collapse navbar-collapse"> 
+        <ul class="navbar-nav ml-auto">
+                <li class="nav-item " >
+                        <div style="border-right:1px solid #e6e6e6">
+                            <i class="fa fa-fw fa-bell"></i>
+                        </div>                        
+                    </li>
+                <li class="nav-item " >
+                    <div class="round" style="background-color: orange;">
+                        <span style="padding:0px;">GH</span>
+                    </div>                        
+                </li>
+        </ul>
+    </div> -->
+
+    
+    <div class="navbar-nav ml-auto">
+        <li class="nav-item " style="margin-right:10px; ">
+                <div style="border-right:1px solid #e6e6e6; padding:5px 30px 0px 0px; ">
+                    <img src="assets/images/notification.png" width="" height="" >
+                </div>                        
+            </li>
+        <li class="nav-item " style="padding:0px 20px 0 15px; " >
+            <div class="round" style="background-color: #DD5D80; ">
+                <span style="padding:0px;">TH</span>
+            </div>                        
+        </li>
+    </div>   
+        
    
 </nav>

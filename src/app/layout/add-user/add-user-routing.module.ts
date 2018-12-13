@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { VedaComponent } from './veda.component';
+import { AddUserComponent } from './add-user.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:VedaComponent
+    component:AddUserComponent
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class VedaRoutingModule { }
+export class AddUserRoutingModule { }

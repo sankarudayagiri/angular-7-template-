@@ -45,7 +45,7 @@
                   <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Healthcode</a>
                   <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Medical Center</a>
                   <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Provider</a>
-                  <a class="nav-item nav-link" style="float:right !important; color:#2ab6f7;">
+                  <a [routerLink]="['/addUser']" class="nav-item nav-link ml-auto" style="float:right !important; color:#2ab6f7;">
                       <i class="fa fa-fw fa-plus-circle"></i>
                       <span>{{ 'Add User' }}</span>
                   </a>           
@@ -65,8 +65,10 @@
                               </div>
                               <!--end of col-->
                               <div class="col-auto">
-                                  <i class=" fa fas fa-signal" style="color:#c8c8c8; padding:5px;"></i>
-                                  <i class=" fa fas fa-exchange" style="color:#c8c8c8; padding:5px;"></i>                              
+                                  <!-- <i class=" fa fas fa-signal" style="color:#c8c8c8; padding:5px;"></i>
+                                  <i class=" fa fas fa-exchange" style="color:#c8c8c8; padding:5px;"></i> -->
+                                  <img src="assets/images/filter.png" width="" height="" style="padding-right: 20px;">
+                                  <img src="assets/images/sort-by-alphabet.png" width="" height="" style="padding-right: 30px;">
                               </div>
                               <!--end of col-->
                           </div>
@@ -76,11 +78,11 @@
               </div>
               <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px;">
                  <div class="row">
-                    <div class="col-md-2" style="border:1px solid red;">
+                    <div class="col-md-2" style="">
                         <img src="assets/images/im.jpg" width="65" height="65" style="border-radius: 50%; padding:10px; float:left;">
                       </div>
-                      <div class="col-md-10" style="border:1px solid green;">
-                        <div class="card-header" style="background-color: white; border-bottom:none;">Header</div>
+                      <div class="col-md-10" style="">
+                        <div class="card-header" style="background-color: white; border-bottom:none;">Mr.Some Name</div>
                         <div class="card-body">
                           <ul>
                             <li>User ID</li>
@@ -96,7 +98,7 @@
               <div class="card" style="margin-top: -1px;border-top: none;">                   
                   <div class="card-footer" style="background-color: white; border-radius: 0px;">Footer</div>
               </div>
-              <div class="tab-content" id="nav-tabContent">
+              <!-- <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
                       <div class="pt-3"></div>
                       <p>1. There's another way to do this for layouts that doesn't have to put the navbar inside the container, and which doesn't require any CSS or Bootstrap overrides.
@@ -118,7 +120,7 @@
                     
                 </div>
                 
-              </div>
+              </div> -->
              
           </div>
       </div>
