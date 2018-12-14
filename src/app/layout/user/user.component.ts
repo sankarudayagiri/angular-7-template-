@@ -57,7 +57,7 @@ export class UserComponent implements OnInit {
       siteId:"654325",
       days:"14",
       attempt:"4"
-    },
+    }
     
    
   ]
