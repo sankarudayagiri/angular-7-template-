@@ -178,7 +178,7 @@ Licensed under MIT
     background: #fff;
     min-height: 460px;
   }
-  table tr{
+  .tableProfile tr{
       border-top: 1px solid #e6e6e6;
   }
   .borderless td, .borderless th {
@@ -223,9 +223,28 @@ Licensed under MIT
 	font-weight: 500;
  
 }
-.card {
-	 
+.card { 
 	
 	background-color: #FFFFFF;
 	box-shadow: -3px 2px 2px 0 rgba(119,151,178,0.16);
+}
+
+
+.tableContact td, th {
+    border:none ;
+    text-align: left;
+    // padding-top:0px ;
+    // padding-bottom:0px;
+    // padding-left:0px;
+    // padding-right:70px;
+    padding:0 60px 0 0;
+}
+@media screen and (max-width: 1450px) {
+    .tableContact td, th{
+        padding-right:10px;
+    }
+}
+.activeContact:active{
+    background-color: #FAFAFA;
+    border-left:6px solid #2ab6f7;
 }

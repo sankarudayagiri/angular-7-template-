@@ -2,14 +2,14 @@
    
     <div class="container-fluid" >
       <div class="row">
-          <div class="col-md-8 text-center " style="background-color: white; padding:0px; ">
+          <div class="col-lg-8 text-center " style="background-color: white; padding:0px; ">
               <nav class="" style="border-right:1px solid #e6e6e6;">
                 <div class="nav nav-tabs " id="nav-tab" role="tablist" style="padding-left:10px;">
-                  <a class="nav-item nav-link active" id="pop1-tab"  href="#pop1" >All</a>
-                  <a class="nav-item nav-link" id="pop2-tab" href="#pop2" >Group</a>
-                  <a class="nav-item nav-link" id="pop3-tab" href="#pop3" >Healthcode</a>
-                  <a class="nav-item nav-link" id="pop4-tab" href="#pop4" >Medical Center</a>
-                  <a class="nav-item nav-link" id="pop5-tab" href="#pop5" >Provider</a>
+                  <a class="nav-item nav-link active" id="pop1-tab"  href="#pop1" data-toggle="tab" >All</a>
+                  <a class="nav-item nav-link" id="pop2-tab" href="#pop2" data-toggle="tab" >Group</a>
+                  <a class="nav-item nav-link" id="pop3-tab" href="#pop3"  data-toggle="tab" >Healthcode</a>
+                  <a class="nav-item nav-link" id="pop4-tab" href="#pop4"  data-toggle="tab" >Medical Center</a>
+                  <a class="nav-item nav-link" id="pop5-tab" href="#pop5"  data-toggle="tab" >Provider</a>
                   <a [routerLink]="['/addUser']" class="nav-item nav-link ml-auto" style="color:#2ab6f7;">
                       <i class="fa fa-fw fa-plus-circle"></i>
                       <span>{{ 'Add User' }}</span>
@@ -17,6 +17,9 @@
                 </div>
                
               </nav>
+
+              <!-- search bar -->
+
               <div class="row ">
                   <div class="col-md-12">
                       <form class="card card-sm" style="border:none;">
@@ -60,32 +63,60 @@
                       </div>
                  </div>
               </div> -->
-              <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px; height:119px;">
+              <!-- <div class="card" style="border-left:6px solid #2ab6f7; border-radius: 0px; height:119px;">
                 <div class="row" >
                     <div class="card-img-left">
                         <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
                    
                     </div>
               
-              <div class="card-body">
-                <h5 class="card-title" style="text-align: left;">Mr.Some name</h5>
-                <ul >
-                    <li>User ID</li>
-                    <li>Site Name</li>
-                    <li>Site ID</li>
-                    <li>Days</li>
-                    <li>Attempt</li>
-                  </ul>
-              </div>
-            </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: left;">Mr.Some name</h5>
+                        <ul >
+                            <li>User ID</li>
+                            <li>Site Name</li>
+                            <li>Site ID</li>
+                            <li>Days</li>
+                            <li>Attempt</li>
+                        </ul>
+                    </div>
                 </div>
+              </div> -->
+              <div class="card activeContact" style=" border-bottom: none; border-radius: 0px; height:119px;" *ngFor="let user of userData">
+                <div class="row" >
+                    <div class="card-img-left">
+                        <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
+                   
+                    </div>
+                    
+                    <div class="card-body">
+                    <h4 style="text-align: left;">{{user.name}}</h4> 
+                      <table class=" table table-responsive tableContact" >
+                          <tr>
+                              <th>User Id</th>
+                              <th>Site Name</th>
+                              <th>Site Id</th>
+                              <th>Days</th>
+                              <th>Attempt</th>
+                          </tr>
+                          <tr>
+                              <td>{{user.userId}}</td>
+                              <td>{{user.siteName}}</td>
+                              <td>{{user.siteId}}</td>
+                              <td>{{user.days}}</td>
+                              <td>{{user.attempt}}</td>
+                          </tr>
+                      </table>
+                    </div>
+                </div>
+              </div>
               <div class="card" style="margin-top: -1px;border-top: none;">                   
                   <div class="card-footer" style="background-color: white; border-radius: 0px;">Footer</div>
               </div>
              
              
           </div>
-          <div class="col-md-4" style="background-color: white;">
+          <div class="col-lg-4" style="background-color: white;">
             <nav class="" style="border:none !important;">
                 <div class="nav nav-tabs" style="border:none !important;">
                  
@@ -125,7 +156,7 @@
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<br>				
-                <table class="table borderless">                    
+                <table class="table tableProfile borderless">                    
                       <tr>
                         <th>Site name</th>
                         <td style="float:right;">some name</td>                        

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./insurer.component.scss']
 })
 export class InsurerComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
