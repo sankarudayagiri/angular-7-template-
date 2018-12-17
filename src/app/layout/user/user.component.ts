@@ -10,7 +10,7 @@ export class UserComponent implements OnInit {
   userData: object=[
     {
       name: "sankar narayana",
-      emailId:"sn@gmail.com",
+      email:"sn@gmail.com",
       phone:"9998887771",
       userId: "1223456",
       siteName:"sanku",
@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
     },
     {
       name: "deepak babu",
-      emailId:"db@gmail.com",
+      email:"db@gmail.com",
       phone:"9998887772",
       userId: "123457",
       siteName:"deepu",
@@ -30,7 +30,7 @@ export class UserComponent implements OnInit {
     },   
     {
       name: "rajkumar nellore",
-      emailId:"rn@gmail.com",
+      email:"rn@gmail.com",
       phone:"9998887773",
       userId: "123458",
       siteName:"raj",
@@ -40,7 +40,7 @@ export class UserComponent implements OnInit {
     },   
     {
       name: "srinivas teja",
-      emailId:"st@gmail.com",
+      email:"st@gmail.com",
       phone:"9998887774",
       userId: "123459",
       siteName:"tj",
@@ -50,7 +50,7 @@ export class UserComponent implements OnInit {
     },
     {
       name: "uday kumar",
-      emailId:"uk@gmail.com",
+      email:"uk@gmail.com",
       phone:"9998887775",
       userId: "123460",
       siteName:"uda",
@@ -60,11 +60,18 @@ export class UserComponent implements OnInit {
     }
     
    
-  ]
+  ];
+  pIndex: number=0;
+  
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  disProfile(index:number){
+    this.pIndex=index;
+    //console.log(ind);
   }
 
 }

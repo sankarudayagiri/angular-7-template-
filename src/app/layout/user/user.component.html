@@ -84,7 +84,7 @@
               </div> -->
               <nav>
                     <div class="nav activeContact flex-column" id="nav-tab" role="tablist">
-                            <div class="card  nav-item nav-link " style=" border-bottom: none; border-radius: 0px; height:119px;" *ngFor="let user of userData" data-toggle="tab" >
+                            <div class="card  nav-item nav-link " style=" border-bottom: none; border-radius: 0px; height:119px;" *ngFor="let user of userData; let i= index;" data-toggle="tab" (click)="disProfile(i)">
                                     <div class="row" >
                                         <div class="card-img-left">
                                             <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
@@ -106,7 +106,7 @@
                                                   <td>{{user.siteName}}</td>
                                                   <td>{{user.siteId}}</td>
                                                   <td>{{user.days}}</td>
-                                                  <td>{{user.attempt}}</td>
+                                                  <td>{{user.attempt}}{{' '+i}}</td>
                                               </tr>
                                           </table>
                                         </div>
@@ -141,20 +141,20 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Mr.Some name
+						{{userData[pIndex].name}}
 					</div>
 					<div class="profile-usertitle-job">
-						4444333221
+						{{userData[pIndex].phone}}
 					</div>
                 </div>
                 <div>
                     <div style="display:inline-block; padding:20px;">
                         <i class=" fa fas fa-phone" style="padding:10px;"></i>
-                        4444333221
+                        {{userData[pIndex].phone}}
                     </div>
                     <div style="display:inline-block; padding:20px;">
                         <i class=" fa fas fa-envelope" style="padding:10px;"></i>
-                        somename@gmail.com
+                        {{userData[pIndex].email}}
                     </div>
                 </div>
 				<!-- END SIDEBAR USER TITLE -->
@@ -163,19 +163,19 @@
                 <table class="table tableProfile borderless">                    
                       <tr>
                         <th>Site name</th>
-                        <td style="float:right;">some name</td>                        
+                        <td style="float:right;">{{userData[pIndex].siteName}}</td>                        
                       </tr>                
                       <tr>
                         <th>site id</th>
-                        <td style="float:right;">122333</td>                       
+                        <td style="float:right;">{{userData[pIndex].siteId}}</td>                       
                       </tr>
                       <tr>
                         <th>days</th>
-                        <td style="float:right;">10</td>                        
+                        <td style="float:right;">{{userData[pIndex].days}}</td>                        
                       </tr>
                       <tr>
                         <th>attempt</th>
-                        <td style="float:right;">50</td>                       
+                        <td style="float:right;">{{userData[pIndex].attempt}}</td>                       
                       </tr>
                       <tr>
                         <th>last logged in</th>
