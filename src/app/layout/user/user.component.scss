@@ -244,7 +244,11 @@ Licensed under MIT
         padding-right:10px;
     }
 }
-.activeContact:active{
-    background-color: #FAFAFA;
-    border-left:6px solid #2ab6f7;
+// .activeContact:active{
+//     background-color: #FAFAFA;
+//     border-left:6px solid #2ab6f7;
+// }
+.activeContact .nav-link.active {
+  background-color: #FAFAFA;
+  border-left:6px solid #2ab6f7;
 }

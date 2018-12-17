@@ -82,34 +82,38 @@
                     </div>
                 </div>
               </div> -->
-              <div class="card activeContact" style=" border-bottom: none; border-radius: 0px; height:119px;" *ngFor="let user of userData">
-                <div class="row" >
-                    <div class="card-img-left">
-                        <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
-                   
-                    </div>
-                    
-                    <div class="card-body">
-                    <h4 style="text-align: left;">{{user.name}}</h4> 
-                      <table class=" table table-responsive tableContact" >
-                          <tr>
-                              <th>User Id</th>
-                              <th>Site Name</th>
-                              <th>Site Id</th>
-                              <th>Days</th>
-                              <th>Attempt</th>
-                          </tr>
-                          <tr>
-                              <td>{{user.userId}}</td>
-                              <td>{{user.siteName}}</td>
-                              <td>{{user.siteId}}</td>
-                              <td>{{user.days}}</td>
-                              <td>{{user.attempt}}</td>
-                          </tr>
-                      </table>
-                    </div>
-                </div>
-              </div>
+              <nav>
+                    <div class="nav activeContact flex-column" id="nav-tab" role="tablist">
+                            <div class="card  nav-item nav-link " style=" border-bottom: none; border-radius: 0px; height:119px;" *ngFor="let user of userData" data-toggle="tab" >
+                                    <div class="row" >
+                                        <div class="card-img-left">
+                                            <img src="assets/images/im.jpg" width="65" height="65" alt="Card image cap" style="border-radius: 50%; padding:10px;">	  
+                                       
+                                        </div>
+                                        
+                                        <div class="card-body">
+                                        <h4 style="text-align: left;">{{user.name}}</h4> 
+                                          <table class=" table table-responsive tableContact" > 
+                                              <tr>
+                                                  <th>User Id</th>
+                                                  <th>Site Name</th>
+                                                  <th>Site Id</th>
+                                                  <th>Days</th>
+                                                  <th>Attempt</th>
+                                              </tr>
+                                              <tr>
+                                                  <td>{{user.userId}}</td>
+                                                  <td>{{user.siteName}}</td>
+                                                  <td>{{user.siteId}}</td>
+                                                  <td>{{user.days}}</td>
+                                                  <td>{{user.attempt}}</td>
+                                              </tr>
+                                          </table>
+                                        </div>
+                                    </div>
+                                  </div>
+                      </div>
+              </nav>
               <div class="card" style="margin-top: -1px;border-top: none;">                   
                   <div class="card-footer" style="background-color: white; border-radius: 0px;">Footer</div>
               </div>
