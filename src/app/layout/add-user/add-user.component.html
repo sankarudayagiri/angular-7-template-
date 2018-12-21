@@ -74,47 +74,56 @@
 
 <div id="formFill" class="tabContent">
     <nav class="navbar navbar-expand-sm flex-container fixed-top" style=" top: 79px; left: 70px; padding:0;">
-    <div class="tab-header"> 
-      <img src="assets/images/user-info.svg" width="20" height="" >
-      <span>User Information</span>
+    <div class="tab-header" id="usrInf" href="#head1" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(1)"> 
+      <img src="assets/images/user-info.svg" width="20" height=""  >
+      <span id="usrInf2">User Information</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="pr" href="#head2" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(2)"> 
       <img src="assets/images/profile.svg" width="20" height="" >
-      <span>Profile</span>
+      <span id="pr2">Profile</span>
     </div>
-    <div class="tab-header">
+    <div class="tab-header" id="add" href="#head3" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(3)">
       <img src="assets/images/noun_Address_2085423.svg" width="20" height="" >
-      <span>Address Details</span>
+      <span id="add2">Address Details</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="pwd" href="#head4" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(4)"> 
       <img src="assets/images/password.svg" width="20" height="" >
-      <span>Password Settings</span>
+      <span id="pwd2">Password Settings</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="usrSet" href="#head5" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(5)"> 
       <img src="assets/images/user-settings.svg" width="20" height="" >
-      <span>User Settings</span>
+      <span id="usrSet2">User Settings</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="msg"  href="#head6" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(6)" > 
       <img src="assets/images/messaging.svg" width="20" height="" >
-      <span>Messaging</span>
+      <span id="msg2">Messaging</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="pvcyFeed" href="#head7" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(7)"> 
       <img src="assets/images/privacy-feedback.svg" width="20" height="" >
-      <span>Privacy & feedback</span>
+      <span id="pvcyFeed2">Privacy & feedback</span>
     </div>
-    <div class="tab-header"> 
+    <div class="tab-header" id="por" href="#head8" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500" (click)="changeColor(8)"> 
       <img src="assets/images/portal.svg" width="20" height="" >
-      <span>Portal</span>
+      <span id="por2">Portal</span>
     </div>    
-    <div class="tab-header"> 
+    <div class="tab-header" id="hltcd" href="#head9" pageScroll [pageScrollInterruptible]="false"
+    [pageScrollDuration]="500"  (click)="changeColor(9)"> 
       <img src="assets/images/healthcode.svg" width="20" height="" >
-      <span>Healthcode</span>
+      <span id="hltcd2">Healthcode</span>
     </div>
     
 </nav>
 <div class="" style="margin:130px 175px 0px 175px;">
     <!-- USER INFORMATION .. ... ... .. -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(1)" id="head1">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/user-info.svg" width="42" height="" style="padding-right:10px;">
@@ -169,7 +178,7 @@
   </div>
   <hr>
     <!-- PROFILE.... .. ... ... -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(2)" id="head2">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/profile.svg" width="42" height="" style="padding-right:10px;">
@@ -239,7 +248,7 @@
   </div>
   <hr>
   <!-- address ...s..... -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(3)" id="head3">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/noun_Address_2085423.svg" width="42" height="" style="padding-right:10px;">
@@ -299,7 +308,7 @@
   </div>
   <hr>
   <!-- password. .... ... -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(4)" id="head4">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/password.svg" width="42" height="" style="padding-right:10px;">
@@ -329,8 +338,10 @@
           </div>
         </div>
         <div class="flex-container-info2">
-            <div class="form-group">
-              <input type="date" class="form-control field-size">
+            <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; padding:1px; background-color: white; height: 60px;">
+                <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px;">Example select</label><br>
+                <input type="text" ngbDatepicker #d="ngbDatepicker" class="date-input"/>
+                <i class="fa fa-chevron-down " (click)="d.toggle()" style=" margin-right: 7px; float:right"></i>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control field-size">
@@ -343,7 +354,7 @@
   </div>
   <hr>
   <!-- USER SETTINGS ... ... .. -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(5)"  id="head5">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/user-settings.svg" width="42" height="" style="padding-right:10px;">
@@ -379,9 +390,9 @@
         </div>
       </div>
   </div>
-  <hr>
+  <hr >
   <!-- MESSAGING.. ... ... .. -->
-  <div class="row" style="padding:60px 0px;">
+  <div id="" class="row" style="padding:60px 0px;" (click)="changeColor(6)" id="head6" >
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/messaging.svg" width="42" height="" style="padding-right:10px;">
@@ -480,7 +491,7 @@
   </div>
   <hr>
   <!-- PRIVACY AND FEEDBACK... ... ... .. -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(7)" id="head7">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/privacy-feedback.svg" width="42" height="" style="padding-right:10px;">
@@ -538,7 +549,7 @@
   </div>
   <hr>
   <!-- PORTAL ...... .. -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(8)" id="head8">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/portal.svg" width="42" height="" style="padding-right:10px;">
@@ -557,7 +568,7 @@
   <hr>
   
 <!-- HEALTHCODE ... ... ..... -->
-  <div class="row" style="padding:60px 0px;">
+  <div class="row" style="padding:60px 0px;" (click)="changeColor(9)" id="head9">
       <div class="col-lg-4 flex-container-info"> 
        <div>
           <img src="assets/images/healthcode.svg" width="42" height="" style="padding-right:10px;">
@@ -569,9 +580,11 @@
       </div>
       <div class="col-lg-8">
           <div class="flex-container-info2">
-              <div class="form-group">
-                <input type="date" class="form-control field-size">
-              </div>
+                <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; padding:1px; background-color: white; height: 60px;">
+                    <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px;">Example select</label><br>
+                    <input type="text" ngbDatepicker #d="ngbDatepicker" class="date-input"/>
+                    <i class="fa fa-chevron-down " (click)="d.toggle()" style=" margin-right: 7px; float:right"></i>
+                </div>
               <div class="form-group">
                   <input type="text" class="form-control field-size">
               </div>

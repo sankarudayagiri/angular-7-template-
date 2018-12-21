@@ -28,6 +28,7 @@
     "core-js": "2.5.7",
     "font-awesome": "4.7.0",
     "ng2-charts": "1.6.0",
+    "ngx-page-scroll": "^5.0.1",
     "primeicons": "^1.0.0",
     "primeng": "^7.0.0",
     "rxjs": "6.3.3",

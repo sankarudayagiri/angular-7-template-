@@ -3,6 +3,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
+// NgxPageScroll
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 //import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -12,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
+import { from } from 'rxjs';
 
 
 // AoT requires an exported function for factories
@@ -31,7 +37,10 @@ import { AuthGuard } from './shared';
         BrowserModule,
         BrowserAnimationsModule,       
         HttpClientModule,       
-        AppRoutingModule
+        AppRoutingModule,
+        FormsModule,
+        NgbModule.forRoot(),
+        NgxPageScrollModule
     ],
     declarations: [AppComponent],
     providers: [AuthGuard],
