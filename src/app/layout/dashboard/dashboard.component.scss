@@ -1,0 +1,39 @@
+.flex-container-info2{
+    display:flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.flex-container-info2 .form-group{
+    padding-right: 20px;
+    flex-grow: 1;
+}
+
+.form-group .field-size{
+    //height: 60px; 
+   // width: 259px;
+}
+
+select.input-lg:focus{   
+    box-shadow: none;
+}
+select.input-lg {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    border:transparent;
+    margin-top:-5px;
+    /* no standardized syntax available, no ie-friendly solution available */
+  }
+
+  select + i.fa {
+    float: right;
+    margin-top: -30px;
+    margin-right: 5px;
+    /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+    pointer-events: none;
+    /* everything after this is just to cover up the original arrow */
+    /* (for browsers that don't support the syntax used above) */
+    background-color: #fff;
+    padding-right: 5px;
+  }

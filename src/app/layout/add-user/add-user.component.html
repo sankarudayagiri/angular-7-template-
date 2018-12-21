@@ -63,11 +63,538 @@
               <div class="round hollow"></div>
               <div class="roundColor">Medical Center</div>
           </div>
-          <div class='flex-containerAddUser'>
+          <div class='flex-containerAddUser' (click)="switchAddUserContent($event, 'formFill')">
               <div class="round hollow"></div>
               <div class="roundColor">Provider</div>
           </div>
           
       </div>
    </div>
+</div>
+
+<div id="formFill" class="tabContent">
+    <nav class="navbar navbar-expand-sm flex-container fixed-top" style=" top: 79px; left: 70px; padding:0;">
+    <div class="tab-header"> 
+      <img src="assets/images/user-info.svg" width="20" height="" >
+      <span>User Information</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/profile.svg" width="20" height="" >
+      <span>Profile</span>
+    </div>
+    <div class="tab-header">
+      <img src="assets/images/noun_Address_2085423.svg" width="20" height="" >
+      <span>Address Details</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/password.svg" width="20" height="" >
+      <span>Password Settings</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/user-settings.svg" width="20" height="" >
+      <span>User Settings</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/messaging.svg" width="20" height="" >
+      <span>Messaging</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/privacy-feedback.svg" width="20" height="" >
+      <span>Privacy & feedback</span>
+    </div>
+    <div class="tab-header"> 
+      <img src="assets/images/portal.svg" width="20" height="" >
+      <span>Portal</span>
+    </div>    
+    <div class="tab-header"> 
+      <img src="assets/images/healthcode.svg" width="20" height="" >
+      <span>Healthcode</span>
+    </div>
+    
+</nav>
+<div class="" style="margin:130px 175px 0px 175px;">
+    <!-- USER INFORMATION .. ... ... .. -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/user-info.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">User Information</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+        <table class="table table-responsive tableInfo">
+          <tr>
+            <th>Specialist code</th>
+            <th>Login ID</th>
+            <th>Site ID</th>
+          </tr>
+          <tr>
+            <td>{{'SP930012'}}</td>
+            <td>{{'00899000'}}</td>
+            <td>{{'008999890'}}</td>
+          </tr>
+        </table>
+        <div class="flex-container-info2">
+          <div class="form-group">
+            <input type="text" class="form-control field-size">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control field-size">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control field-size">
+          </div>
+        </div>
+        <div class="flex-container-info2">
+          <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+              <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+              <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                <option>select</option>
+                <option>select2</option>
+                <option>select3</option>
+              </select>
+              <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+            </div>
+          <div class="form-group">
+              <input type="text" class="form-control field-size">
+          </div>
+          <div class="form-group">
+              <input type="text" class="form-control field-size">
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+    <!-- PROFILE.... .. ... ... -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/profile.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Profile</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+          <div class=" flex-container-info2">
+              <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                  <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                  <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                    <option>select</option>
+                    <option>select2</option>
+                    <option>select3</option>
+                  </select>
+                  <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+              </div> 
+          </div>
+          <br>
+
+          <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>EPO</th>
+                  <th>EFB</th>
+                  <th>Hellenic</th>
+                  <th>Message</th>
+                  <th>VEDA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+      </div>
+  </div>
+  <hr>
+  <!-- address ...s..... -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/noun_Address_2085423.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Address Details</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+         <div class="row">
+            <div class="col-lg-8">
+                <div class="flex-container-info2">
+                    <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                        <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                        <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                          <option>select</option>
+                          <option>select2</option>
+                          <option>select3</option>
+                        </select>
+                        <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+                    </div>
+                    <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                        <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                        <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                          <option>select</option>
+                          <option>select2</option>
+                          <option>select3</option>
+                        </select>
+                        <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+                    </div>
+                </div>                                        
+                
+                <div class="flex-container-info2">
+                    <div class="form-group">
+                      <input type="text" class="form-control field-size">
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 flex-container-info2">
+                        <div class="form-group">
+                            <input type="text" class="form-control field-size">
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4">
+             <p style=" font-size: 16px; color:#94999D; font-weight: normal;">Specialist Address</p>
+             <div>
+               <p style="font-size: 20px; font-weight: 600;">Mr. Adam Addleson</p>
+               <p style="font-weight: 600; color:#424D5C;">30 Sandringham Flats Charing Cross road London PIN: WC2H 0BJ</p>
+             </div>
+            </div>
+         </div>
+      </div>
+  </div>
+  <hr>
+  <!-- password. .... ... -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/password.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Passwords</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-4 flex-container-info" >
+              <div>Active password</div>
+              <div class="form-group" style="padding:10px;margin:0;">
+                  <div class="checkbox checbox-switch switch-primary">
+                      <label>
+                          <input type="checkbox" name="" checked="" />
+                          <span></span>                                        
+                      </label>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-8 flex-container-info2">
+              <div class="form-group">
+                  <input type="text" class="form-control">
+                </div>
+          </div>
+        </div>
+        <div class="flex-container-info2">
+            <div class="form-group">
+              <input type="date" class="form-control field-size">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control field-size">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control field-size">
+            </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <!-- USER SETTINGS ... ... .. -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/user-settings.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">User Settings</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="flex-container-info2">
+                    <div class="form-group">
+                      <input type="text" class="form-control field-size">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control field-size">
+                    </div> 
+            </div> 
+          </div>
+          <div class="col-lg-4 flex-container-info" >
+              <div>File notification message</div>
+              <div class="form-group" style="padding:10px;margin:0;">
+                  <div class="checkbox checbox-switch switch-primary">
+                      <label>
+                          <input type="checkbox" name="" checked="" />
+                          <span></span>                                        
+                      </label>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <hr>
+  <!-- MESSAGING.. ... ... .. -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/messaging.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Messaging</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+            <div class="col-lg-3 flex-container-info" >
+                <div>Show - - - - -</div>
+                <div class="form-group" style="padding:10px;margin:0;">
+                    <div class="checkbox checbox-switch switch-primary">
+                        <label>
+                            <input type="checkbox" name="" checked="" />
+                            <span></span>                                        
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 flex-container-info" >
+                <div>Active</div>
+                <div class="form-group" style="padding:10px;margin:0;">
+                    <div class="checkbox checbox-switch switch-primary">
+                        <label>
+                            <input type="checkbox" name="" />
+                            <span></span>                                        
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 flex-container-info" >
+                <div>Public ID</div>
+                <div class="form-group" style="padding:10px;margin:0;">
+                    <div class="checkbox checbox-switch switch-primary">
+                        <label>
+                            <input type="checkbox" name="" checked="" />
+                            <span></span>                                        
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 flex-container-info" >
+                <div>Email Notification</div>
+                <div class="form-group" style="padding:10px;margin:0;">
+                    <div class="checkbox checbox-switch switch-primary">
+                        <label>
+                            <input type="checkbox" name="" checked="" />
+                            <span></span>                                        
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8">
+              <div class="flex-container-info2">
+                  <div class="form-group">
+                    <input type="text" class="form-control field-size">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control field-size">
+              </div> 
+          </div> 
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="flex-container-info2">
+                    <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                        <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                        <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                          <option>select</option>
+                          <option>select2</option>
+                          <option>select3</option>
+                        </select>
+                        <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+                    </div>
+                    <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                        <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                        <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                          <option>select</option>
+                          <option>select2</option>
+                          <option>select3</option>
+                        </select>
+                        <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+                    </div> 
+            </div> 
+            </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <!-- PRIVACY AND FEEDBACK... ... ... .. -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/privacy-feedback.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Privacy & feedback</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+        <p>I do not wish to receive promotional information form Healthcode Ltd by</p>
+       <div class="flex-container-info2">
+          <label><input type="radio"class="radio-inline input-radio " name="radios" value=""><span class="outside"><span class="inside"></span></span>Email</label>
+          <label><input type="radio"class="radio-inline input-radio " name="radios" value=""><span class="outside"><span class="inside"></span></span>Telephone</label>
+          <label><input type="radio" class="radio-inline input-radio " name="radios" value=""><span class="outside"><span class="inside"></span></span>SMS</label>
+       </div>
+       <br>
+
+       <p>I do not wish Healthcode Ltd to use my data for Marketing purpose by</p>
+       <div class="row">
+         <div class="col-lg-6">
+            <div class="flex-container-info2" style="align-items: center;">
+                <div>Post</div>
+                <div class="form-group" style="padding:10px;margin:0;">
+                    <div class="checkbox checbox-switch switch-primary">
+                        <label style="margin:0;">
+                           <input type="checkbox" name="" checked="" />
+                              <span></span>                                        
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" >
+                    <input type="text" class="form-control field-size">
+                </div>  
+      
+             </div>
+         </div>
+       </div>
+       <br>
+
+       <p>Do not contact this portal user</p>
+       <div class="flex-container-info">
+          <div>Post</div>
+          <div class="form-group" style="padding:10px;margin:0;">
+              <div class="checkbox checbox-switch switch-primary">
+                  <label style="margin:0;">
+                     <input type="checkbox" name="" checked="" />
+                        <span></span>                                        
+                  </label>
+              </div>
+          </div>
+       </div>
+       
+      </div>
+  </div>
+  <hr>
+  <!-- PORTAL ...... .. -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/portal.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Portal</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+          <div class="form-group">
+              <input type="text" class="form-control">
+            </div> 
+      </div>
+  </div>
+  <hr>
+  
+<!-- HEALTHCODE ... ... ..... -->
+  <div class="row" style="padding:60px 0px;">
+      <div class="col-lg-4 flex-container-info"> 
+       <div>
+          <img src="assets/images/healthcode.svg" width="42" height="" style="padding-right:10px;">
+       </div>
+       <div>         
+        <p style="font-size: 18px; margin:0;">Healthcode</p>
+        <p style="font-size: 14px; color:#94999D; margin:0;">Lorem Ipsum is simply dummy</p>
+       </div>
+      </div>
+      <div class="col-lg-8">
+          <div class="flex-container-info2">
+              <div class="form-group">
+                <input type="date" class="form-control field-size">
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control field-size">
+              </div>
+              <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; flex-grow:2; padding-right:10px; margin-right:20px; background-color: white; height: 60px; min-width:30%">
+                  <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px; padding-left:5px;">Example select</label>
+                  <select class="form-control input-lg" style="padding-left:5px; outline:none;">
+                    <option>select</option>
+                    <option>select2</option>
+                    <option>select3</option>
+                  </select>
+                  <i class="fa fa-chevron-down" style="margin-top:-37px;"></i>
+              </div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <br><br>
+  <!-- <div style="border:1px solid green; width:100px; height:100px; margin:50px 0px;"></div> -->
+  <div class="flex-container-button">
+      <button class="btn btn-light">cancel</button>&nbsp;
+      <button class="btn btn-primary">submit</button>
+  </div>
+  <br>
+  <br>
+</div>
 </div>
