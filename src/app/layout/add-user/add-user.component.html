@@ -343,11 +343,17 @@
                 <input type="text" ngbDatepicker #d="ngbDatepicker" class="date-input"/>
                 <i class="fa fa-chevron-down " (click)="d.toggle()" style=" margin-right: 7px; float:right"></i>
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control field-size">
+            <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; padding:1px; background-color: white; height: 60px;">
+                <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px;">Example select</label><br>
+                <div>{{valCount}}</div>
+                <i class="fa fa-plus-circle " (click)="valTotal(1)" style="margin-top: -33px; margin-right: 10px; float:right; font-size:30px;"></i>
+                <i class="fa fa-minus-circle " (click)="valTotal(-1)" style="margin-top: -33px; margin-right: 45px; float:right; font-size:30px;"></i>
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control field-size">
+            <div class="form-group" style="border: 1px solid #EBEBEB; border-radius: 5px; padding:1px; background-color: white; height: 60px;">
+                <label for="exampleFormControlSelect1" style="margin:-60px 0px; font-size:13px;">Example select</label><br>
+                <div>{{attemptCount}}</div>
+                <i class="fa fa-plus-circle " (click)="attemptTotal(1)" style="margin-top: -33px; margin-right: 10px; float:right; font-size:30px;"></i>
+                <i class="fa fa-minus-circle " (click)="attemptTotal(-1)" style="margin-top: -33px; margin-right: 45px; float:right; font-size:30px;"></i>
             </div>
           </div>
       </div>

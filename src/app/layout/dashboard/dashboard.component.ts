@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  someArray: string[]=["id1","id2","id3","id4","id5","id6","id7"]
+  someArray: string[]=["id1","id2","id3","id4","id5","id6","id7"];
+  count: number=0;
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +20,16 @@ export class DashboardComponent implements OnInit {
         document.getElementById(this.someArray[i-1]).style.backgroundColor="#66C19F";
       }
 
+    }
+  }
+
+  total(n:number){
+    if(n==1){
+      this.count++;
+    }
+    else{
+      if(this.count!=0)
+        this.count--;
     }
   }
 

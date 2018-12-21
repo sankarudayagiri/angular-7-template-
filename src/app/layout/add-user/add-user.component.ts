@@ -10,6 +10,8 @@ import {PageScrollConfig} from 'ngx-page-scroll';
 export class AddUserComponent implements OnInit {
   addNavId: string[] =['usrInf','pr','add','pwd','usrSet','msg','pvcyFeed','por','hltcd'];
   addNavId2: string[] =['usrInf2','pr2','add2','pwd2','usrSet2','msg2','pvcyFeed2','por2','hltcd2'];  
+  valCount: number=0;
+  attemptCount:number=0;
   constructor() {
     //header and adduser navbar(79+63)=142
     PageScrollConfig.defaultScrollOffset = 142;
@@ -50,6 +52,27 @@ export class AddUserComponent implements OnInit {
         document.getElementById(this.addNavId2[i-1]).style.color="#94999D";
         document.getElementById(this.addNavId[i-1]).style.backgroundColor="#F2F2F2";
       }
+    }
+  }
+
+  valTotal(n:number){
+    console.log("validation");
+    if(n==1){
+      this.valCount++;
+    }
+    else{
+      if(this.valCount!=0)
+        this.valCount--;
+    }
+  }
+  attemptTotal(n:number){
+    console.log("attempt");
+    if(n==1){
+      this.attemptCount++;
+    }
+    else{
+      if(this.attemptCount!=0)
+        this.attemptCount--;
     }
   }
   
