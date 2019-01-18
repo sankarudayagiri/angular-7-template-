@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-    collapedSideBar: boolean;
+    collapedSideBar: boolean=false;
+    ng: boolean=false;
 
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log("from layout")
+        console.log(this.collapedSideBar);
+    }
 
     receiveCollapsed($event) {
         this.collapedSideBar = $event;
+        console.log("hello the following is  collapsed value")
+        console.log($event);
+        this.ng=$event;
     }
 }

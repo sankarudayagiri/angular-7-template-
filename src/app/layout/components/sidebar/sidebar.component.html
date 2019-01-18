@@ -52,8 +52,9 @@
         </a>
         <a [routerLink]="['/registrations']" [routerLinkActive]="['router-link-active']" class="list-group-item sidebar-logo">
             <!-- <i class="fa fa-fw fa-edit"></i> -->
-            <!-- <span>{{ 'Registrations' }}</span> -->
+           
             <img src="assets/images/registration.png" width="" height="">
+            <span>{{ 'Registrations' }}</span>
         </a>
         
         <!-- <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -144,8 +145,8 @@
   
     <!-- collapse sidebar -->
 
-    <!-- <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
         <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
         <span>{{ 'Collapse Sidebar' }}</span>
-    </div> -->
+    </div>
 </nav>

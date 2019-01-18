@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 //import { TranslateService } from '@ngx-translate/core';
 
@@ -9,6 +9,9 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
     public pushRightClass: string;
+
+    @Input() myFriend: boolean=false;
+    myFriend2:boolean=false;
 
     constructor(public router: Router) {
 
@@ -30,6 +33,8 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {
         this.pushRightClass = 'push-right';
+        console.log("this is from header");
+        console.log(this.myFriend);
     }
 
     isToggled(): boolean {
@@ -54,4 +59,14 @@ export class HeaderComponent implements OnInit {
     // changeLang(language: string) {
     //     this.translate.use(language);
     // }
+    inputVal(){
+        console.log("from header function");
+        console.log(this.myFriend);
+    }
+    inputToggle()
+    {
+        this.myFriend2=!this.myFriend2;
+        console.log("inputtoggle");
+        console.log(this.myFriend2);
+    } 
 }
