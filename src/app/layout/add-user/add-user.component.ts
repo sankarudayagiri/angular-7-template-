@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import {PageScrollConfig} from 'ngx-page-scroll';
 
@@ -12,6 +12,9 @@ export class AddUserComponent implements OnInit {
   addNavId2: string[] =['usrInf2','pr2','add2','pwd2','usrSet2','msg2','pvcyFeed2','por2','hltcd2'];  
   valCount: number=0;
   attemptCount:number=0;
+
+  @Input() collapedSideBar: boolean=false;
+
   constructor() {
     //header and adduser navbar(79+63)=142
     PageScrollConfig.defaultScrollOffset = 142;
@@ -23,6 +26,11 @@ export class AddUserComponent implements OnInit {
     document.getElementById('usrInf').style.backgroundColor="#66C19F";
     this.switchAddUserContent("", 'SP');    
    
+  }
+
+  inputVal(){
+    console.log("from add user function");
+    console.log(this.collapedSideBar);
   }
 
   switchAddUserContent(evt,tabName){

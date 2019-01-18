@@ -1,6 +1,6 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
     <div class="list-group">
-            <a class="list-group-item sidebar-logo">
+            <a class="list-group-item sidebar-logo " [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
                 <!-- <i class="fa fa-fw fa-user"></i> -->
                 <!-- <span>{{ 'User' }}</span> -->
                 <img src="assets/images/menu.png" width="" height="" style="opacity:1;">
