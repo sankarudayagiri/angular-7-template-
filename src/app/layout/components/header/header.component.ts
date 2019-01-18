@@ -10,7 +10,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent implements OnInit {
     public pushRightClass: string;
 
-    @Input() myFriend: boolean=false;
+    @Input() collapedSideBar: boolean=false;
     myFriend2:boolean=false;
 
     constructor(public router: Router) {
@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
     ngOnInit() {
         this.pushRightClass = 'push-right';
         console.log("this is from header");
-        console.log(this.myFriend);
+        console.log(this.collapedSideBar);
     }
 
     isToggled(): boolean {
@@ -61,7 +61,7 @@ export class HeaderComponent implements OnInit {
     // }
     inputVal(){
         console.log("from header function");
-        console.log(this.myFriend);
+        console.log(this.collapedSideBar);
     }
     inputToggle()
     {
