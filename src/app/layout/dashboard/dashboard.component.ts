@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SidebarToggleService } from './../../_services/sidebar-toggle.service'
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   someArray: string[]=["id1","id2","id3","id4","id5","id6","id7"];
   count: number=0;
-  constructor() { }
+
+  name: string;
+  constructor(public sidebarTSer: SidebarToggleService) {
+    this.name=this.sidebarTSer.collapsedValue;
+   }
 
   ngOnInit() {
+    console.log(this.name);
   }
   someButton(n:number){
     console.log("sankur.. ...");

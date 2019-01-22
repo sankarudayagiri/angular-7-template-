@@ -6,6 +6,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
+import { SidebarToggleService } from './../../_services/sidebar-toggle.service';
+
 @NgModule({
   declarations: [DashboardComponent],
   imports: [
@@ -13,6 +15,7 @@ import { DashboardComponent } from './dashboard.component';
     DashboardRoutingModule,
     FormsModule,
     NgbModule.forRoot()
-  ]
+  ],
+  providers:[SidebarToggleService]
 })
 export class DashboardModule { }

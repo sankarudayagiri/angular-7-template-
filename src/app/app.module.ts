@@ -20,6 +20,8 @@ import { AuthGuard } from './shared';
 import { from } from 'rxjs';
 
 
+import{ SidebarToggleService } from './_services/sidebar-toggle.service';
+
 // AoT requires an exported function for factories
 // export const createTranslateLoader = (http: HttpClient) => {
 //     /* for development
@@ -43,7 +45,7 @@ import { from } from 'rxjs';
         NgxPageScrollModule
     ],
     declarations: [AppComponent],
-    providers: [AuthGuard],
+    providers: [AuthGuard,SidebarToggleService],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

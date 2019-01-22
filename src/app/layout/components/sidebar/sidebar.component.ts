@@ -2,6 +2,8 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 //import { TranslateService } from '@ngx-translate/core';
 
+import{ SidebarToggleService } from './../../../_services/sidebar-toggle.service';
+
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
@@ -15,7 +17,7 @@ export class SidebarComponent implements OnInit {
 
     @Output() collapsedEvent = new EventEmitter<boolean>();
 
-    constructor( public router: Router) {
+    constructor( public router: Router, public sidebarTSer: SidebarToggleService) {
         // this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de']);
         // this.translate.setDefaultLang('en');
         // const browserLang = this.translate.getBrowserLang();
@@ -54,7 +56,10 @@ export class SidebarComponent implements OnInit {
 
     toggleCollapsed() {
         this.collapsed = !this.collapsed;
-        this.collapsedEvent.emit(this.collapsed);
+        this.collapsedEvent.emit(this.collapsed);        
+        console.log("from sidebar");
+        console.log(this.sidebarTSer.getSome());
+
     }
 
     isToggled(): boolean {
