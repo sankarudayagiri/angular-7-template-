@@ -15,6 +15,8 @@ export class SidebarComponent implements OnInit {
     showMenu: string;
     pushRightClass: string;
 
+    teach:boolean= false;
+
     @Output() collapsedEvent = new EventEmitter<boolean>();
 
     constructor( public router: Router, public sidebarTSer: SidebarToggleService) {
@@ -35,6 +37,8 @@ export class SidebarComponent implements OnInit {
     }
 
     ngOnInit() {
+        // this.greetStd();
+        console.log("sidebar");
         this.isActive = false;
         this.collapsed = false;
         this.showMenu = '';
@@ -83,5 +87,12 @@ export class SidebarComponent implements OnInit {
 
     onLoggedout() {
         localStorage.removeItem('isLoggedin');
+    }
+
+    greetStd(){
+        this.teach=!this.teach;
+        this.sidebarTSer.sendMsg(this.teach);
+        console.log("hello using servicxe");
+        console.log(this.teach);
     }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 //import { TranslateService } from '@ngx-translate/core';
+import { SidebarToggleService } from './../../../_services/sidebar-toggle.service';
 
 @Component({
     selector: 'app-header',
@@ -9,11 +10,12 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
     public pushRightClass: string;
+    boolValue:boolean;
 
     @Input() collapedSideBar: boolean=false;
     myFriend2:boolean=false;
 
-    constructor(public router: Router) {
+    constructor(public router: Router, private sidebarTSer: SidebarToggleService) {
 
         // this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         // this.translate.setDefaultLang('en');
@@ -32,9 +34,16 @@ export class HeaderComponent implements OnInit {
     }
 
     ngOnInit() {
+        // debugger;
+        console.log("header");
         this.pushRightClass = 'push-right';
-        console.log("this is from header");
-        console.log(this.collapedSideBar);
+        // console.log("this is from header");
+        // console.log(this.collapedSideBar);
+        this.sidebarTSer.teacherMsg$.subscribe((message:boolean) => {
+            //alert("hello from header"+message);
+            this.boolValue=message;
+
+        });
     }
 
     isToggled(): boolean {

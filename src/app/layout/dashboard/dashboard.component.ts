@@ -12,15 +12,30 @@ export class DashboardComponent implements OnInit {
   count: number=0;
 
   name: string;
-  constructor(public sidebarTSer: SidebarToggleService) {
+  nameBool:boolean;
+  constructor(private sidebarTSer: SidebarToggleService) {
     this.name=this.sidebarTSer.collapsedValue;
    }
 
   ngOnInit() {
-    console.log(this.name);
+    // debugger
+    //console.log(this.name);
+    console.log("dashboard"); 
+    this.sidebarTSer.teacherMsg$.subscribe((message) => {
+      //alert("hello from header"+message);
+      this.nameBool=message;
+
+  });
+
   }
   someButton(n:number){
+    //debugger;
     console.log("sankur.. ...");
+    this.sidebarTSer.teacherMsg$.subscribe(msg => {
+      console.log("form dashboard ngoninit");
+      console.log(msg);
+      this.nameBool=msg;
+    });
     for(let i=1;i<=7;i++){
       if(n==i){
         document.getElementById(this.someArray[i-1]).style.color="#FFFFFF";

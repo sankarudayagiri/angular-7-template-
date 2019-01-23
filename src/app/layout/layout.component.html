@@ -1,7 +1,7 @@
 <app-header [collapedSideBar]=" ng "></app-header>
 <app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
 <section class="main-container" [ngClass]="{collapsed: collapedSideBar}" >
-    <router-outlet [collapedSideBar]=" ng "></router-outlet>
+    <router-outlet ></router-outlet>
 </section>
 <!-- <div class="container" style="border: 1px solid blue;">
     <router-outlet></router-outlet>
